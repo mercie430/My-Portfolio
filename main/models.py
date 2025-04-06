@@ -37,6 +37,21 @@ class AboutSection(models.Model):
         return self.title
 
 
+class Skills(models.Model):
+    name = models.CharField(max_length=100)
+    desc = models.TextField()
+    level = models.BigIntegerField()
+
+    def __str__(self):
+        return self.name
+    
+class Resume(models.Model):
+    title = models.CharField(max_length=100)
+    desc = models.TextField()
+
+    def __str__(self):
+        return self.title
+
 
 
 
